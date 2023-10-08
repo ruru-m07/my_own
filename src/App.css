@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.App {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-custom {
+    background-color: #111222;
+}
+
+/* scroll bar */
+html::-webkit-scrollbar-track {
+    background-color: #111222;
+}
+
+html::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F5F5F5;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #2b2b2b;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #333333;
+}
+
+/* navbar location text */
+.uu {
+    text-decoration: underline;
+}
+
+/* home page */
+.homemain {
+    background: #111222;
+    height: 92.5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.homemainfc {
+    margin-top: 55px;
+    background: url("./img/welcome.jpg") no-repeat fixed center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* index up blur page */
+.homepagetext {
+    width: 40%;
+    height: 40%;
+    border: solid 1px #000;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    backdrop-filter: blur(7px);
+    margin: 0;
+    padding: 50px;
+    box-shadow: 0 0 5px #000;
+    transition: .5s;
+    color: #000;
+}
+.secthame {
+    background: linear-gradient(90deg, #fdffd0, #e6ff25);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.homepagetext:hover {
+    box-shadow: 0 0 20px #000;
+}
+.homepagetext h1 {
+    font-size: 70px;
+}
+.homepagetext h2 {
+    margin-top: 50px;
+}
+
+/* hello img back in home con */
+.circle1 {
+    width: 400px;
+    height: 50 0px;
+    position: absolute;
+    top: 9%;
+    left: 58%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    animation: anim1 1.5s infinite linear;
+}
+
+/* anim for hello hand */
+@keyframes anim1 {
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+/*  my self typeing anim  */
+.textanim {
+    background: url("./img/textbg.jpg") no-repeat fixed center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.lineartext {
+    background-image: linear-gradient(90.2deg, rgba(79, 255, 255, 1) 0.3%, rgba(0, 213, 255, 1) 99.8%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.wrapper {
+    display: flex;
+}
+.wrapper .static-txt {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+.wrapper .dynamic-txts {
+    margin-left: 1px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.dynamic-txts li {
+    list-style: none;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+.dynamic-txts li span {
+    position: relative;
+    margin: 5px 0;
+    overflow: hidden;
+    line-height: 80px;
+}
+.dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: -1;
+    border-left: 2px solid #fff;
+    animation: typing 1s steps(100) infinite;
+}
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* about page */
+.about {
+    background: url("./img/meow.webp") no-repeat fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutblur {
+    height: 50%;
+    width: 50%;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    border: solid 1px #000;
+    display: grid;
+    place-items: center;
+    transition: .5s;
+}
+
+.aboutblur:hover {
+    box-shadow: 0 0 20px #000;
+}
+.title {
+    background-image: linear-gradient(270deg,
+            #90fd7d,
+            #9e86ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 50px;
+}
+.dec {
+    background-image: linear-gradient(270deg,
+            #90fd7d,
+            #9e86ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 25px;
+    margin: 25px;
+    text-align: center;
+}
+
